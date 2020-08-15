@@ -6,6 +6,8 @@ import com.yihengyi.beans.dtos.PersonDto;
 import com.yihengyi.beans.enums.Gender;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.Date;
 
 public class BeanCopyTest {
@@ -20,5 +22,6 @@ public class BeanCopyTest {
 
         PersonDto personDto = PersonConverter.INSTANCE.do2dto(personDo);
         System.out.println(personDto);
+        assertEquals("Hollis", personDto.getUserName());
     }
 }
